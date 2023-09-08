@@ -8,7 +8,7 @@ from tools import capture_output, loop_iterable
 
 
 class PLAYWRIGHT: # TODO: IMPLEMENT THIS CODE TO MY PACKAGE
-    def __init__(self, url, browser:str=['chromium', 'firefox', 'webkit'], headless:bool=True, timeout:int=None, **k):
+    def __init__(self, url, browser:str=Literal['chromium', 'firefox', 'webkit'], headless:bool=True, timeout:int=None, **k):
         self.url = url
         self.elements = None
         self.p = sync_playwright().start()
